@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="steles.css">
+    <title>Поддержка | PalblchCreate</title>
+</head>
+
+<body>
+    <header class="header d-flex justify-content-between align-items-center">
+        <h1 onclick="location.href='index.html'">PalblchCreate</h1>
+        <div class="user-section">
+            <img src="img/account.png" alt="Аккаунт" class="account-icon" data-toggle="modal" data-target="#registerModal">
+            <img src="img/menu.png" alt="Меню" class="menu-icon" id="menuIcon">
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a class="dropdown-item" href="index.html">Главная</a>
+                <a class="dropdown-item" href="about.html">О нас</a>
+                <a class="dropdown-item" href="news.html">Новости</a>
+                <a class="dropdown-item" href="service.html">Услуги</a>
+                <a class="dropdown-item" href="support.html">Оформить <br>
+                    заказ</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container support mt-5">
+        <h2 class="text-center text-white">Свяжитесь с нами</h2>
+        <p class="text-center text-white">Если вы хотите что-то заказать или есть вопросы, напишите нам, и мы постараемся помочь.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="text-white">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="text-white">Ваш email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Введите ваш email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="text-white">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Опишите, что вы хотите сделать"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!-- Модальное окно регистрации и авторизации -->
+     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Вход / Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="authTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register">Регистрация</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3">
+                        <!-- Форма входа -->
+                        <div class="tab-pane fade show active" id="login">
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginEmail">E-mail</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Пароль</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                            </form>
+                        </div>
+                        <!-- Форма регистрации -->
+                        <div class="tab-pane fade" id="register">
+                            <form id="registerForm">
+                                <div class="form-group">
+                                    <label for="registerEmail">E-mail</label>
+                                    <input type="email" class="form-control" id="registerEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerLogin">Логин</label>
+                                    <input type="text" class="form-control" id="registerLogin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">Пароль</label>
+                                    <input type="password" class="form-control" id="registerPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Зарегистрироваться</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

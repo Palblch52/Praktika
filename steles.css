@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #424A56; /* Цвет фона */
+}
+
+.header {
+    background-color: #8803FC; /* Цвет фона в header */
+    padding: 20px 20px; /* Увеличенные отступы шапки */
+}
+
+.header h1 {
+    color: black; /* Цвет названия */
+    display: inline; /* Чтобы название и иконки были в одной строке */
+    font-size: 2rem; /* Увеличенный размер шрифта */
+    cursor: pointer; /* Курсор для названия */
+}
+
+.user-section {
+    position: relative; /* Для выпадающего меню */
+    display: inline; /* Чтобы элементы были в одной строке */
+}
+
+.account-icon, .menu-icon {
+    width: 40px; /* Увеличенный размер иконок */
+    cursor: pointer;
+    margin-left: 20px; /* Отступ между иконками */
+}
+
+.bg-gray {
+    background-color: #d9d9d9; /* Серый фон для области под шапкой */
+    min-height: 600px; /* Минимальная высота для фона */
+    padding: 20px; /* Отступы под шапкой */
+}
+
+.about{
+    font-size: 20px;
+}
+
+.about-img{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.about-img img{
+    width: 520px;
+}
+
+/* Стили для выпадающего меню */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Под кнопкой */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.news-block {
+    width: 45%; /* Ширина блока с изображением */
+    margin-bottom: 20px;
+    color: white;
+}
+
+.news-block img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news-title {
+    color: white;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.news-desc {
+    margin: 0;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.footer {
+    font-size: 18px;
+    background-color: black; /* Цвет фона для нижнего колонтитула */
+    color: white; /* Цвет текста */
+    padding: 15px 0; /* Отступы */
+    width: 100%; /* Ширина на всю страницу */
+    bottom: 0; /* Привязка к низу */
+}
+
+.card{
+    height: 500px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh; /* Регулируй значение, чтобы сместить ниже */
+}
+
+.service .row {
+    margin-top: 30px; /* Опускает карточки ниже */
+}
+
+.form-group label{
+    font-size: 20px !important; 
+}
+
+.support h2{
+    font-size: 30px;
+}
+
+.support p{
+    font-size: 20px;
+}
+
+.cooperation{
+    margin-bottom: 50px;
+}
+
+.cooperation h1{
+    text-align: center;
+    color: #fff;
+}
+
+.cooperation-img img{
+    width: 300px;
+}
+
+.cooperation-img{
+    display: flex;
+    justify-content: space-between;
+
+}

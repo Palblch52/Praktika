@@ -1,0 +1,120 @@
+<!DOCTYPE html>  
+<html lang="ru">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="steles.css">  
+    <title>О нас - PalblchCreate</title>   
+</head>  
+
+<body>  
+    <header class="header d-flex justify-content-between align-items-center">  
+        <h1 onclick="location.href='index.html'">PalblchCreate</h1>  
+        <div class="user-section">  
+            <img src="img/account.png" alt="Аккаунт" class="account-icon" id="accountIcon" data-toggle="modal"  
+                data-target="#registerModal">  
+            <img src="img/menu.png" alt="Меню" class="menu-icon" id="menuIcon">  
+            <div class="dropdown-menu" id="dropdownMenu">  
+                <a class="dropdown-item" href="index.html">Главная</a> <!-- Ссылка на главную страницу -->  
+                <a class="dropdown-item" href="about.html">О нас</a> 
+                <a class="dropdown-item" href="news.html">Новости</a>  
+                <a class="dropdown-item" href="service.html">Услуги</a>  
+                <a class="dropdown-item" href="support.html">Оформить <br>
+                    заказ</a>  
+            </div>  
+        </div>  
+    </header>  
+
+    <!-- Контент страницы -->  
+    <div class="container">  
+        <div class="about content">  
+            <h2>О нас</h2>  
+            <p>PPalblchCreate – платформа, на которой вы можете заказать разработку сайта всего за неделю, а также создание мобильного приложения или уникального дизайна на любую тему!</p>  
+            <p>Мы гарантируем высокое качество, скорость выполнения и полную поддержку на всех этапах проекта. Вы всегда будете на связи с нашими разработчиками и сможете вносить правки в процессе работы.</p>  
+            <p>Кроме того, мы предлагаем гибкую систему тарифов, индивидуальный подход к каждому клиенту и прозрачные условия сотрудничества. Доверьте свою идею профессионалам и получите готовый результат в кратчайшие сроки!</p>
+            <div class="about-img">
+                <img src="img/office.jpg" alt="">
+                <img src="img/office_2.jpg" alt="">
+            </div>
+
+        </div>  
+    </div>  
+    <div class="cooperation">
+        <h1>Сотрудничество</h1>
+        <div class="cooperation-img">
+            <img src="img/lambo4.png" alt="">
+            <img src="img/Roblox 1.png" alt="">
+            <img src="img/влгу.png" alt="">
+            <img src="img/Yandex.png" alt="">
+            <img src="img/buggati2.png" alt="">
+        </div>
+    </div>
+
+    <footer class="footer text-center">  
+        <p>&copy; 2025 PalblchCreate. Все права защищены.</p>  
+    </footer>  
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Вход / Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="authTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register">Регистрация</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3">
+                        <!-- Форма входа -->
+                        <div class="tab-pane fade show active" id="login">
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginEmail">E-mail</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Пароль</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                            </form>
+                        </div>
+                        <!-- Форма регистрации -->
+                        <div class="tab-pane fade" id="register">
+                            <form id="registerForm">
+                                <div class="form-group">
+                                    <label for="registerEmail">E-mail</label>
+                                    <input type="email" class="form-control" id="registerEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerLogin">Логин</label>
+                                    <input type="text" class="form-control" id="registerLogin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">Пароль</label>
+                                    <input type="password" class="form-control" id="registerPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Зарегистрироваться</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <script src="script.js"></script>  
+</body>  
+
+</html>
