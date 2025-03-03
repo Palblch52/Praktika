@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
     <link rel="stylesheet" href="steles.css">  
     <title>PalblchCreate</title>  
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(100164865, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/100164865" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.js"></script>
+ <style> .cookie-notification {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 15px;
+}
+.cookie-notification_hidden_yes {
+    display: none;
+}
+.cookie-notification__header {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+.cookie-notification__body {
+    margin-bottom: 10px;
+}</style>
 </head>  
 
 <body>  
@@ -15,7 +51,7 @@
         <div class="user-section">  
             <img src="img/account.png" alt="Аккаунт" class="account-icon" id="accountIcon" data-toggle="modal"  
                 data-target="#registerModal">  
-            <img src="img/menu.png" alt="Меню" class="menu-icon" id="menuIcon">  
+            <img src="img/menu.png" alt="Меню" class="menu-icon" id="menuIcon" ym(100164865,'reachGoal','click_button')>  
             <div class="dropdown-menu" id="dropdownMenu">  
                 <a class="dropdown-item" href="index.html">Главная</a>  
                 <a class="dropdown-item" href="about.html">О нас</a>  
@@ -160,6 +196,68 @@
             </div>
         </div>
     </div>
+    <div class="cookie-notification cookie-notification_hidden_yes">
+        <div class="cookie-notification__header">Предупреждение о сборе статистики</div>
+        <div class="cookie-notification__body">
+       <p>Этот сайт собирает статистику посещения и данные посетителей.</p>
+      <p>[Ссылка на Пользовательское соглашение вашего сайта или на Политику конфиденциальности вашего сайта]</p>
+        </div>
+        <div class="cookie-notification__buttons">
+            <button class="cookie-notification__button" id="yes">Я согласен</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var messageElement = document.querySelector('.cookie-notification');
+        // Если нет cookies, то показываем плашку
+        if (!Cookies.get('agreement')) {
+            showMessage();
+        } else {
+            initCounter();
+        }
+        // Загружаем сам код счетчика сразу
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document,'script','//mc.yandex.ru/metrika/tag.js', 'ym')
+        // Функция добавляет класс к DOM-элементу. Вы можете использовать библиотеку jQuery или другой фреймворк
+        function addClass (o, c) {
+            var re = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+            if (!o || re.test(o.className)) {
+                return;
+            }
+            o.className = (o.className + " " + c).replace(/\s+/g, " ").replace(/(^ | $)/g, "");
+        }
+        // Функция удаляет класс из DOM-элемента. Вы можете использовать библиотеку jQuery или другой фреймворк
+        function removeClass (o, c) {
+            var re = new RegExp('(^|\\s)' + c + '(\\s|$)', 'g');
+            if (!o) {
+                return;
+            }
+            o.className = o.className.replace(re, '$1').replace(/\s+/g, ' ').replace(/(^ | $)/g, '');
+        }
+        // Функция, которая прячет предупреждение
+        function hideMessage () {
+            addClass(messageElement, 'cookie-notification_hidden_yes');
+        }
+        // Функция, которая показывает предупреждение
+        function showMessage () {
+            removeClass(messageElement, 'cookie-notification_hidden_yes');
+        }
+        function saveAnswer () {
+            // Прячем предупреждение
+            hideMessage();
+
+            // Ставим cookies
+            Cookies.set('agreement', '1');
+        }
+        function initCounter () {
+            ym(100164865, 'init', {});
+            saveAnswer();
+        }
+        // Нажатие кнопки "Я согласен"
+        document.querySelector('#yes').addEventListener('click', function () {
+            initCounter();
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>  
